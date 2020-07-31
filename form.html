@@ -22,38 +22,38 @@
     <!-- Line between heading and form  -->
     <p class="text-white">Please provide all required details to register your business with us</p>
     <!-- Start of Registration container** -->
-    <div class="container shadow-sm p-3 mb-5 bg-white rounded">
+    <div class="container shadow-sm px-4 py-3 mb-5 bg-white rounded">
         <form data-toggle="validator">
             <!-- Question for first name and last name  -->
             <div class="form-group row" id="name">
-                <label for="fname" class="col-sm-5 text-right">Name :</label>
-                <select name="Prefix-Name" class="form-control col-sm-1 mr-2">
+                <label for="fname" class="col-md-5 col-12 text-centre text-md-right">Name :</label>
+                <select name="Prefix-Name" class="form-control col-md-2 col-3 mr-2">
                     <option value="Mr">Mr</option>
                     <option value="Mrs">Mrs</option>
                     <option value="Dr">Dr</option>
                     <option value="Ms">Ms</option>
                     <!-- Name Input with Validation -->
-                    <input type="text" pattern="^[_A-z]{2,}$" class="form-control col-sm-2 mr-2" id="" name="firstname"
-                        placeholder="First name" required>
-                    <input type="text" pattern="^[_A-z]{2,}$" ame="lastname" class="form-control col-sm-2"
-                        placeholder="Last name" required>
+                    <input type="text" pattern="^[_A-z]{2,}$" class="form-control col-md-2 col-4  mr-2" id=""
+                        name="firstname" placeholder="First" required>
+                    <input type="text" pattern="^[_A-z]{2,}$" ame="lastname" class="form-control col-md-2 col-4"
+                        placeholder="Last" required>
             </div>
             <!-- Question for mobile number -->
             <div class="form-group row ">
-                <label for="phone" class="col-sm-5 text-right">Mobile Number:</label>
-                <input type="tel" id="mobile-no" oninput="validateno()" class="form-control col-sm-2" name="mobile"
-                    placeholder="9954545454" required>
+                <label for="phone" class="col-md-5 col-12 text-centre text-md-right">Mobile Number:</label>
+                <input type="tel" id="mobile-no" oninput="validateno()" class="form-control col-md-3 col-12"
+                    name="mobile" placeholder="9954545454" required>
             </div>
             <!-- Question for email  -->
             <div class="form-group row">
-                <label for="email" class="col-sm-5 text-right">Email Address :</label>
-                <input type="email" id="email-add" oninput="validatemail()" class="form-control col-sm-2" name="email"
-                    placeholder="xyz@domain.com" required>
+                <label for="email" class="col-md-5 col-12 text-centre text-md-right">Email Address :</label>
+                <input type="email" id="email-add" oninput="validatemail()" class="form-control col-md-3 col-12"
+                    name="email" placeholder="xyz@domain.com" required>
             </div>
             <!-- Radio button for gender question -->
             <div class="form-group row">
-                <label for="gender" class="col-sm-5 text-right">Gender :</label>
-                <div class="col-sm-5 text-left">
+                <label for="gender" class="col-md-5 text-centre text-md-right">Gender :</label>
+                <div class="col-md-5 col-12 text-centre text-md-left">
                     <input type="radio" name="gender" value="male">
                     <label for="male">Male</label>
                     <input type="radio" name="gender" value="female">
@@ -64,9 +64,8 @@
             </div>
             <!-- Dropdown for business type question -->
             <div class="form-group row">
-                <label for="business-select" class="col-sm-5 text-right">Choose Business type:</label>
-                <select name="business" class="form-control col-sm-2">
-                    <option value="">...Choose...</option>
+                <label for="business-select" class="col-md-5 text-centre text-md-right">Choose Business type:</label>
+                <select name="business" class="form-control col-md-3">
                     <option value="Education">Education</option>
                     <option value="Hospitality">Hospitality</option>
                     <option value="SaaS">SaaS</option>
@@ -77,34 +76,48 @@
             </div>
             <!-- Checkbox for busineed need question  -->
             <div class="form-group row">
-                <label for="need" class="col-sm-5 text-right"> Choose Business Need: </label>
-                <div class="col-sm-5 text-left">
-                    <input type="checkbox" name="technology" id="checkID1">
-                    <label for="checkID1"> Technology </label>
-                    <input type="checkbox" name="consultancy" id="checkID2">
-                    <label for="checkID2"> Consultancy </label>
-                    <input type="checkbox" name="marketing" id="checkID3">
-                    <label for="checkID3"> Marketing </label>
-                    <input type="checkbox" name="management" id="checkID4">
-                    <label for="checkID4"> Management </label>
+                <label for="need" class="col-md-5 col-12 text-centre text-md-right"> Choose Business Need: </label>
+                <div class="col-md-7">
+                    <div class="row ">
+                        <div class="col-12 text-left">
+                            <input type="checkbox" name="technology" id="checkID1">
+                            <label for="checkID1"> Technology </label>
+                        </div>
+                        <div class="col-12 text-left">
+                            <input type="checkbox" name="consultancy" id="checkID2">
+                            <label for="checkID2"> Consultancy </label>
+                        </div>
+                        <div class="col-12 text-left">
+                            <input type="checkbox" name="marketing" id="checkID3">
+                            <label for="checkID3"> Marketing </label>
+                        </div>
+                        <div class="col-12 text-left">
+                            <input type="checkbox" name="management" id="checkID4">
+                            <label for="checkID4"> Management </label>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- Date picker for meeting question -->
             <div class="form-group row">
-                <label for="start" class="col-sm-5 text-right">Date of Meeting :</label>
+                <label for="start" class="col-md-5 col-12 text-centre text-md-right">Date of Meeting :</label>
                 <input type="date" id="meet-date" oninput="validatedate()"
-                    class="form-control col-sm-2 input-group date" name="trip-start" value="dd-mm-yyyy" min="01-08-2020"
-                    max="31-12-2020" required>
+                    class="form-control col-md-3 col-12 input-group date" name="trip-start" value="dd-mm-yyyy"
+                    min="01-08-2020" max="31-12-2020" required>
             </div>
             <!-- Attach file option  -->
             <div class="form-group row">
-                <label for="proposal" class="col-sm-5 text-right">Attach Business Document:</label>
+                <label for="proposal" class="col-md-5 col-12 text-centre text-md-right">Attach Business
+                    Document:</label>
                 <input type="file" name="proposal" accept="image/png, image/jpeg, .pdf, .doc,.docx" required>
             </div>
             <!-- A textarea for write anything else  -->
             <div class="form-group row">
-                <label for="subject" class="col-sm-5 text-right">Anything else(you would love to share) :</label>
-                <textarea class="form-control col-sm-2 " name="subject" placeholder="Write Something.."></textarea>
+                <label for="subject" class="col-md-5 col-12 text-centre text-md-right">Anything else(you would love to
+                    share)
+                    :</label>
+                <textarea class="form-control col-md-3 col-12" name="subject"
+                    placeholder="Write Something.."></textarea>
             </div>
             <!-- Terms & Conditions Checkbox  -->
             <div class="form-group">
