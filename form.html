@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Register with Us </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="indi.ico">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fc199e97ba.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-light">
+    <!-- Registration form heading -->
+    <div class="register-heading bg-dark mb-2 pb-1 pt-3 text-white">
+        <h2> Register Your Business </h2>
+        <p> Stay Asure with us because <strong>Business Accelarator</strong> is Body of Startup India Program </p>
+    </div>
+    <!-- Line between heading and form  -->
+    <p class="text-white">Please provide all required details to register your business with us</p>
+    <!-- Start of Registration container** -->
+    <div class="container shadow-sm p-3 mb-5 bg-white rounded">
+        <form data-toggle="validator">
+            <!-- Question for first name and last name  -->
+            <div class="form-group row" id="name">
+                <label for="fname" class="col-sm-5 text-right">Name :</label>
+                <select name="Prefix-Name" class="form-control col-sm-1 mr-2">
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Dr">Dr</option>
+                    <option value="Ms">Ms</option>
+                    <!-- Name Input with Validation -->
+                    <input type="text" pattern="^[_A-z]{2,}$" class="form-control col-sm-2 mr-2" id="" name="firstname"
+                        placeholder="First name" required>
+                    <input type="text" pattern="^[_A-z]{2,}$" ame="lastname" class="form-control col-sm-2"
+                        placeholder="Last name" required>
+            </div>
+            <!-- Question for mobile number -->
+            <div class="form-group row ">
+                <label for="phone" class="col-sm-5 text-right">Mobile Number:</label>
+                <input type="tel" id="mobile-no" oninput="validateno()" class="form-control col-sm-2" name="mobile"
+                    placeholder="9954545454" required>
+            </div>
+            <!-- Question for email  -->
+            <div class="form-group row">
+                <label for="email" class="col-sm-5 text-right">Email Address :</label>
+                <input type="email" id="email-add" oninput="validatemail()" class="form-control col-sm-2" name="email"
+                    placeholder="xyz@domain.com" required>
+            </div>
+            <!-- Radio button for gender question -->
+            <div class="form-group row">
+                <label for="gender" class="col-sm-5 text-right">Gender :</label>
+                <div class="col-sm-5 text-left">
+                    <input type="radio" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" value="other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+            <!-- Dropdown for business type question -->
+            <div class="form-group row">
+                <label for="business-select" class="col-sm-5 text-right">Choose Business type:</label>
+                <select name="business" class="form-control col-sm-2">
+                    <option value="">...Choose...</option>
+                    <option value="Education">Education</option>
+                    <option value="Hospitality">Hospitality</option>
+                    <option value="SaaS">SaaS</option>
+                    <option value="Automobile">Automobile</option>
+                    <option value="Textile">Textile</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <!-- Checkbox for busineed need question  -->
+            <div class="form-group row">
+                <label for="need" class="col-sm-5 text-right"> Choose Business Need: </label>
+                <div class="col-sm-5 text-left">
+                    <input type="checkbox" name="technology" id="checkID1">
+                    <label for="checkID1"> Technology </label>
+                    <input type="checkbox" name="consultancy" id="checkID2">
+                    <label for="checkID2"> Consultancy </label>
+                    <input type="checkbox" name="marketing" id="checkID3">
+                    <label for="checkID3"> Marketing </label>
+                    <input type="checkbox" name="management" id="checkID4">
+                    <label for="checkID4"> Management </label>
+                </div>
+            </div>
+            <!-- Date picker for meeting question -->
+            <div class="form-group row">
+                <label for="start" class="col-sm-5 text-right">Date of Meeting :</label>
+                <input type="date" id="meet-date" oninput="validatedate()"
+                    class="form-control col-sm-2 input-group date" name="trip-start" value="dd-mm-yyyy" min="01-08-2020"
+                    max="31-12-2020" required>
+            </div>
+            <!-- Attach file option  -->
+            <div class="form-group row">
+                <label for="proposal" class="col-sm-5 text-right">Attach Business Document:</label>
+                <input type="file" name="proposal" accept="image/png, image/jpeg, .pdf, .doc,.docx" required>
+            </div>
+            <!-- A textarea for write anything else  -->
+            <div class="form-group row">
+                <label for="subject" class="col-sm-5 text-right">Anything else(you would love to share) :</label>
+                <textarea class="form-control col-sm-2 " name="subject" placeholder="Write Something.."></textarea>
+            </div>
+            <!-- Terms & Conditions Checkbox  -->
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input is-valid" type="checkbox" id="invalidCheck3" required>
+                    <label class="form-check-label" for="invalidCheck3"> Agree to terms and conditions </label>
+                    <div class="invalid-feedback">
+                        You must agree before submitting.
+                    </div>
+                </div>
+            </div>
+            <!-- All three buttons  -->
+            <div class="form-group d-flex justify-content-center mt-6">
+                <a href="./index.html"> <button type="button" class="btn btn-info active">Back</button> </a>
+                <button class="btn btn-dark mx-4 active" type="submit">Submit</button>
+                <input class="btn btn-danger active" type="reset">
+            </div>
+        </form>
+    </div>
+    <!-- Footer of page with four social site links & icons -->
+    <footer class="footer bg-dark fixed-bottom">
+        <p class="text-white"> © 2020 Business Accelarator </p>
+        <div class="h4">
+            <a class="footer-link mx-3 text-white" href="http://linkedin.com/"> <i class="fab fa-linkedin"></i> </a>
+            <a class="footer-link mx-3 text-white" href="https://twitter.com/"> <i class="fab fa-twitter"></i> </a>
+            <a class="footer-link mx-3 text-white" href="https://www.facebook.com/"> <i class="fab fa-facebook"></i>
+            </a>
+            <a class="footer-link mx-3 text-white" href="https://www.instagram.com/"> <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
+    <script type="text/javascript" src="./script.js"> </script>
+</body>
+
+</html>
