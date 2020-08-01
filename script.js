@@ -26,3 +26,22 @@ function validatemail() {
         u.classList.add("is-valid");
     }
 }
+// Local Data Storage for the Form
+function insert() {
+    var input_object = {};
+    input_object["firstname"] = document.getElementById("firstname").value;
+    input_object["lastname"] = document.getElementById("lastname").value;
+    input_object["mobile_no"] = document.getElementById("mobile_no").value;
+    input_object["email_id"] = document.getElementById("email_id").value;
+    input_object["gender"] = document.querySelector('input[name="gender"]:checked').value;
+    var business_type = document.getElementById("business_type");
+    input_object["elected_business"] = business_type.options[business_type.selectedIndex].value;
+    input_object["checkedValue"] = [];
+    var inputElements = document.getElementsByClassName('checked_business');
+    for (var i = 0; inputElements[i]; ++i) {
+        inputElements[i].checked ? input_object["checkedValue"].push(inputElements[i].value) : null;
+    }
+    console.log(input_object)
+    input_object["meet_date"] = document.getElementById("meet_date").value;
+    input_object["text_area"] = document.getElementById("text_area").value;
+}

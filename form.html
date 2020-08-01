@@ -33,27 +33,27 @@
                     <option value="Dr">Dr</option>
                     <option value="Ms">Ms</option>
                     <!-- Name Input with Validation -->
-                    <input type="text" pattern="^[_A-z]{2,}$" class="form-control col-md-2 col-4  mr-2" id=""
-                        name="firstname" placeholder="First" required>
-                    <input type="text" pattern="^[_A-z]{2,}$" ame="lastname" class="form-control col-md-2 col-4"
+                    <input type="text" pattern="^[_A-z]{2,}$" id="firstname" class="form-control col-md-2 col-4  mr-2"
+                        placeholder="First" required>
+                    <input type="text" pattern="^[_A-z]{2,}$" id="lastname" class="form-control col-md-2 col-4"
                         placeholder="Last" required>
             </div>
             <!-- Question for mobile number -->
             <div class="form-group row ">
                 <label for="phone" class="col-md-5 col-12 text-centre text-md-right">Mobile Number:</label>
-                <input type="tel" id="mobile-no" oninput="validateno()" class="form-control col-md-3 col-12"
+                <input type="tel" id="mobile_no" oninput="validateno()" class="form-control col-md-3 col-12"
                     name="mobile" placeholder="9954545454" required>
             </div>
             <!-- Question for email  -->
             <div class="form-group row">
                 <label for="email" class="col-md-5 col-12 text-centre text-md-right">Email Address :</label>
-                <input type="email" id="email-add" oninput="validatemail()" class="form-control col-md-3 col-12"
+                <input type="email" id="email_id" oninput="validatemail()" class="form-control col-md-3 col-12"
                     name="email" placeholder="xyz@domain.com" required>
             </div>
             <!-- Radio button for gender question -->
             <div class="form-group row">
                 <label for="gender" class="col-md-5 text-centre text-md-right">Gender :</label>
-                <div class="col-md-5 col-12 text-centre text-md-left">
+                <div class="col-md-5 col-12 text-centre text-md-left" id="gender">
                     <input type="radio" name="gender" value="male">
                     <label for="male">Male</label>
                     <input type="radio" name="gender" value="female">
@@ -65,13 +65,13 @@
             <!-- Dropdown for business type question -->
             <div class="form-group row">
                 <label for="business-select" class="col-md-5 text-centre text-md-right">Choose Business type:</label>
-                <select name="business" class="form-control col-md-3">
-                    <option value="Education">Education</option>
-                    <option value="Hospitality">Hospitality</option>
-                    <option value="SaaS">SaaS</option>
-                    <option value="Automobile">Automobile</option>
-                    <option value="Textile">Textile</option>
-                    <option value="Other">Other</option>
+                <select name="business" class="form-control col-md-3" id="business_type">
+                    <option value="Education" >Education</option>
+                    <option value="Hospitality" >Hospitality</option>
+                    <option value="SaaS" >SaaS</option>
+                    <option value="Automobile" >Automobile</option>
+                    <option value="Textile" >Textile</option>
+                    <option value="Other" >Other</option>
                 </select>
             </div>
             <!-- Checkbox for busineed need question  -->
@@ -80,19 +80,19 @@
                 <div class="col-md-7">
                     <div class="row ">
                         <div class="col-12 text-left">
-                            <input type="checkbox" name="technology" id="checkID1">
+                            <input type="checkbox" name="technology" id="checkID1" class="checked_business" value="Technology">
                             <label for="checkID1"> Technology </label>
                         </div>
                         <div class="col-12 text-left">
-                            <input type="checkbox" name="consultancy" id="checkID2">
+                            <input type="checkbox" name="consultancy" id="checkID2" class="checked_business" value="Consultancy">
                             <label for="checkID2"> Consultancy </label>
                         </div>
                         <div class="col-12 text-left">
-                            <input type="checkbox" name="marketing" id="checkID3">
+                            <input type="checkbox" name="marketing" id="checkID3" class="checked_business" value="Marketing">
                             <label for="checkID3"> Marketing </label>
                         </div>
                         <div class="col-12 text-left">
-                            <input type="checkbox" name="management" id="checkID4">
+                            <input type="checkbox" name="management" id="checkID4" class="checked_business" value="Management">
                             <label for="checkID4"> Management </label>
                         </div>
                     </div>
@@ -101,9 +101,8 @@
             <!-- Date picker for meeting question -->
             <div class="form-group row">
                 <label for="start" class="col-md-5 col-12 text-centre text-md-right">Date of Meeting :</label>
-                <input type="date" id="meet-date" oninput="validatedate()"
-                    class="form-control col-md-3 col-12 input-group date" name="trip-start" value="dd-mm-yyyy"
-                    min="01-08-2020" max="31-12-2020" required>
+                <input type="date" id="meet_date" class="form-control col-md-3 col-12 input-group date"
+                    name="trip-start" value="dd-mm-yyyy" min="01-08-2020" max="31-12-2020" required>
             </div>
             <!-- Attach file option  -->
             <div class="form-group row">
@@ -116,8 +115,8 @@
                 <label for="subject" class="col-md-5 col-12 text-centre text-md-right">Anything else(you would love to
                     share)
                     :</label>
-                <textarea class="form-control col-md-3 col-12" name="subject"
-                    placeholder="Write Something.."></textarea>
+                <textarea class="form-control col-md-3 col-12" name="subject" placeholder="Write Something.."
+                    id="text_area"></textarea>
             </div>
             <!-- Terms & Conditions Checkbox  -->
             <div class="form-group">
@@ -132,7 +131,7 @@
             <!-- All three buttons  -->
             <div class="form-group d-flex justify-content-center mt-6">
                 <a href="./index.html"> <button type="button" class="btn btn-info active">Back</button> </a>
-                <button class="btn btn-dark mx-4 active" type="submit">Submit</button>
+                <button class="btn btn-dark mx-4 active" type="submit" onclick="insert()">Submit</button>
                 <input class="btn btn-danger active" type="reset">
             </div>
         </form>
