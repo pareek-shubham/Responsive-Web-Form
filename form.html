@@ -23,7 +23,7 @@
     <p class="text-white">Please provide all required details to register your business with us</p>
     <!-- Start of Registration container** -->
     <div class="container shadow-sm px-4 py-3 mb-5 bg-white rounded">
-        <form data-toggle="validator">
+        <form data-toggle="validator" lass="needs-validation" onsubmit="insert()">
             <!-- Question for first name and last name  -->
             <div class="form-group row" id="name">
                 <label for="fname" class="col-md-5 col-12 text-centre text-md-right">Name :</label>
@@ -66,12 +66,12 @@
             <div class="form-group row">
                 <label for="business-select" class="col-md-5 text-centre text-md-right">Choose Business type:</label>
                 <select name="business" class="form-control col-md-3" id="business_type">
-                    <option value="Education" >Education</option>
-                    <option value="Hospitality" >Hospitality</option>
-                    <option value="SaaS" >SaaS</option>
-                    <option value="Automobile" >Automobile</option>
-                    <option value="Textile" >Textile</option>
-                    <option value="Other" >Other</option>
+                    <option value="Education">Education</option>
+                    <option value="Hospitality">Hospitality</option>
+                    <option value="SaaS">SaaS</option>
+                    <option value="Automobile">Automobile</option>
+                    <option value="Textile">Textile</option>
+                    <option value="Other">Other</option>
                 </select>
             </div>
             <!-- Checkbox for busineed need question  -->
@@ -80,19 +80,23 @@
                 <div class="col-md-7">
                     <div class="row ">
                         <div class="col-12 text-left">
-                            <input type="checkbox" name="technology" id="checkID1" class="checked_business" value="Technology">
+                            <input type="checkbox" name="technology" id="checkID1" class="checked_business"
+                                value="Technology">
                             <label for="checkID1"> Technology </label>
                         </div>
                         <div class="col-12 text-left">
-                            <input type="checkbox" name="consultancy" id="checkID2" class="checked_business" value="Consultancy">
+                            <input type="checkbox" name="consultancy" id="checkID2" class="checked_business"
+                                value="Consultancy">
                             <label for="checkID2"> Consultancy </label>
                         </div>
                         <div class="col-12 text-left">
-                            <input type="checkbox" name="marketing" id="checkID3" class="checked_business" value="Marketing">
+                            <input type="checkbox" name="marketing" id="checkID3" class="checked_business"
+                                value="Marketing">
                             <label for="checkID3"> Marketing </label>
                         </div>
                         <div class="col-12 text-left">
-                            <input type="checkbox" name="management" id="checkID4" class="checked_business" value="Management">
+                            <input type="checkbox" name="management" id="checkID4" class="checked_business"
+                                value="Management">
                             <label for="checkID4"> Management </label>
                         </div>
                     </div>
@@ -131,7 +135,7 @@
             <!-- All three buttons  -->
             <div class="form-group d-flex justify-content-center mt-6">
                 <a href="./index.html"> <button type="button" class="btn btn-info active">Back</button> </a>
-                <button class="btn btn-dark mx-4 active" type="submit" onclick="insert()">Submit</button>
+                <button class="btn btn-dark mx-4 active" type="submit">Submit</button>
                 <input class="btn btn-danger active" type="reset">
             </div>
         </form>

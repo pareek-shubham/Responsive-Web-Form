@@ -1,8 +1,8 @@
 // Mobile Number Validation 
 function validateno() {
     var regex = /^(((\+){1}91){1})? ?-?[6-9][0-9]{9}$/;
-    var mobile = document.getElementById("mobile-no").value;
-    var v = document.getElementById("mobile-no");
+    var mobile = document.getElementById("mobile_no").value;
+    var v = document.getElementById("mobile_no");
     var arr = regex.test(mobile);
     if (!arr) {
         v.classList.add("is-invalid");
@@ -12,11 +12,12 @@ function validateno() {
         v.classList.add("is-valid");
     }
 }
+
 // E-Mail Validation 
 function validatemail() {
     var mail_regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    var mail = document.getElementById("email-add").value;
-    var u = document.getElementById("email-add");
+    var mail = document.getElementById("email_id").value;
+    var u = document.getElementById("email_id");
     var mail_arr = mail_regex.test(mail);
     if (!mail_arr) {
         u.classList.add("is-invalid");
@@ -26,7 +27,8 @@ function validatemail() {
         u.classList.add("is-valid");
     }
 }
-// Local Data Storage for the Form
+
+// Getting all data inputs of Registratoin Form 
 function insert() {
     var input_object = {};
     input_object["firstname"] = document.getElementById("firstname").value;
@@ -34,14 +36,19 @@ function insert() {
     input_object["mobile_no"] = document.getElementById("mobile_no").value;
     input_object["email_id"] = document.getElementById("email_id").value;
     input_object["gender"] = document.querySelector('input[name="gender"]:checked').value;
+    // To Get the data input for Business Type via Dropdown
     var business_type = document.getElementById("business_type");
-    input_object["elected_business"] = business_type.options[business_type.selectedIndex].value;
-    input_object["checkedValue"] = [];
+    input_object["selected_business"] = business_type.options[business_type.selectedIndex].value;
+    // To Get the data input for Business Need via Checkboxes 
+    input_object["businessNeed"] = [];
     var inputElements = document.getElementsByClassName('checked_business');
     for (var i = 0; inputElements[i]; ++i) {
-        inputElements[i].checked ? input_object["checkedValue"].push(inputElements[i].value) : null;
+        inputElements[i].checked ? input_object["businessNeed"].push(inputElements[i].value) : null;
     }
-    console.log(input_object)
+    // Rest data input for Meeting Date & Textarea 
     input_object["meet_date"] = document.getElementById("meet_date").value;
     input_object["text_area"] = document.getElementById("text_area").value;
+    let userData = localStorage.getItem('UserData') ? JSON.parse(localStorage.getItem('UserData')) : [];
+    userData.push(input_object);
+    localStorage.setItem("UserData", JSON.stringify(userData));
 }
