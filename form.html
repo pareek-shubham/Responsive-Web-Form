@@ -26,7 +26,7 @@
         <form data-toggle="validator" class="needs-validation" onsubmit="userInput()">
             <!-- Question for first name and last name  -->
             <div class="form-group row" id="name">
-                <label for="fname" class="col-md-5 col-12 text-centre text-md-right">Name :</label>
+                <label for="fname" class="col-md-5 col-12  text-md-right">Name :</label>
                 <select name="Prefix-Name" class="form-control col-md-2 col-3 mr-2">
                     <option value="Mr">Mr</option>
                     <option value="Mrs">Mrs</option>
@@ -40,20 +40,20 @@
             </div>
             <!-- Question for mobile number -->
             <div class="form-group row ">
-                <label for="phone" class="col-md-5 col-12 text-centre text-md-right">Mobile Number:</label>
+                <label for="phone" class="col-md-5 col-12 text-md-right">Mobile Number:</label>
                 <input type="tel" pattern="^(((\+){1}91){1})? ?-?[6-9][0-9]{9}$" id="mobile_no"
                     class="form-control col-md-3 col-12" name="mobile" placeholder="9954545454" required>
             </div>
             <!-- Question for email  -->
             <div class="form-group row">
-                <label for="email" class="col-md-5 col-12 text-centre text-md-right">Email Address :</label>
+                <label for="email" class="col-md-5 col-12 text-md-right">Email Address :</label>
                 <input type="email" id="email_id" class="form-control col-md-3 col-12" name="email"
                     placeholder="xyz@domain.com" required>
             </div>
             <!-- Radio button for gender question -->
             <div class="form-group row">
-                <label for="gender" class="col-md-5 text-centre text-md-right">Gender :</label>
-                <div class="col-md-5 col-12 text-centre text-md-left" id="gender">
+                <label for="gender" class="col-md-5 text-md-right">Gender :</label>
+                <div class="col-md-5 col-12 text-md-left" id="gender">
                     <input type="radio" name="gender" value="male">
                     <label for="male">Male</label>
                     <input type="radio" name="gender" value="female">
@@ -64,7 +64,7 @@
             </div>
             <!-- Dropdown for business type question -->
             <div class="form-group row">
-                <label for="business-select" class="col-md-5 text-centre text-md-right">Choose Business type:</label>
+                <label for="business-select" class="col-md-5 text-md-right">Choose Business type:</label>
                 <select name="business" class="form-control col-md-3" id="business_type">
                     <option value="Education">Education</option>
                     <option value="Hospitality">Hospitality</option>
@@ -76,7 +76,7 @@
             </div>
             <!-- Checkbox for busineed need question  -->
             <div class="form-group row">
-                <label for="need" class="col-md-5 col-12 text-centre text-md-right"> Choose Business Need: </label>
+                <label for="need" class="col-md-5 col-12 text-md-right"> Choose Business Need: </label>
                 <div class="col-md-7">
                     <div class="row ">
                         <div class="col-12 text-left">
@@ -104,19 +104,19 @@
             </div>
             <!-- Date picker for meeting question -->
             <div class="form-group row">
-                <label for="start" class="col-md-5 col-12 text-centre text-md-right">Date of Meeting :</label>
+                <label for="start" class="col-md-5 col-12 text-md-right">Date of Meeting :</label>
                 <input type="date" id="meet_date" class="form-control col-md-3 col-12 input-group date"
                     name="trip-start" value="dd-mm-yyyy" min="01-08-2020" max="31-12-2020" required>
             </div>
             <!-- Attach file option  -->
             <div class="form-group row">
-                <label for="proposal" class="col-md-5 col-12 text-centre text-md-right">Attach Business
+                <label for="proposal" class="col-md-5 col-12 text-md-right">Attach Business
                     Document:</label>
                 <input type="file" name="proposal" accept="image/png, image/jpeg, .pdf, .doc,.docx" required>
             </div>
             <!-- A textarea for write anything else  -->
             <div class="form-group row">
-                <label for="subject" class="col-md-5 col-12 text-centre text-md-right">Anything else(you would love to
+                <label for="subject" class="col-md-5 col-12 text-md-right">Anything else(you would love to
                     share)
                     :</label>
                 <textarea class="form-control col-md-3 col-12" name="subject" placeholder="Write Something.."
