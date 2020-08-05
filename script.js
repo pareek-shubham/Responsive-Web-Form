@@ -1,35 +1,5 @@
-// Mobile Number Validation 
-function validateno() {
-    var regex = /^(((\+){1}91){1})? ?-?[6-9][0-9]{9}$/;
-    var mobile = document.getElementById("mobile_no").value;
-    var v = document.getElementById("mobile_no");
-    var arr = regex.test(mobile);
-    if (!arr) {
-        v.classList.add("is-invalid");
-    }
-    else {
-        v.classList.remove("is-invalid");
-        v.classList.add("is-valid");
-    }
-}
-
-// E-Mail Validation 
-function validatemail() {
-    var mail_regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    var mail = document.getElementById("email_id").value;
-    var u = document.getElementById("email_id");
-    var mail_arr = mail_regex.test(mail);
-    if (!mail_arr) {
-        u.classList.add("is-invalid");
-    }
-    else {
-        u.classList.remove("is-invalid");
-        u.classList.add("is-valid");
-    }
-}
-
 // Getting all data inputs of Registratoin Form 
-function insert() {
+function userInput() {
     var input_object = {};
     input_object["firstname"] = document.getElementById("firstname").value;
     input_object["lastname"] = document.getElementById("lastname").value;
@@ -48,6 +18,10 @@ function insert() {
     // Rest data input for Meeting Date & Textarea 
     input_object["meet_date"] = document.getElementById("meet_date").value;
     input_object["text_area"] = document.getElementById("text_area").value;
+    insert(input_object);
+}
+
+function insert(input_object) {
     let userData = localStorage.getItem('UserData') ? JSON.parse(localStorage.getItem('UserData')) : [];
     userData.push(input_object);
     localStorage.setItem("UserData", JSON.stringify(userData));
